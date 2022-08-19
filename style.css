@@ -1,13 +1,18 @@
-*{
+* {
     padding: 0%;
     margin: 0%;
     box-sizing: border-box;
 }
 
+h1 {
+    text-align: center;
+    color: white;
+}
+
 body {
     width: 100%;
     height: 100vh;
-    background-color: #131312;
+    background-color: #2D4059;
     font-family: sans-serif;
     display: flex;
     align-items: center;
@@ -23,7 +28,29 @@ header {
     overflow: hidden;
 }
 
-header .menu-side, .song-side {
+#foto-menu{
+    margin-top: auto;
+    overflow: auto;
+}
+
+#header-foto-indo {
+    justify-content: center;
+}
+
+#kotak-besar-lagu {
+    background-color: D9D9D9;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.kotak-lagu p {
+    margin: 0px;
+}
+
+header .menu-side,
+.song-side {
     position: relative;
     width: 25%;
     height: 90%;
@@ -56,7 +83,7 @@ header .menu-side .Playlist {
 }
 
 header .menu-side .Playlist h4 {
-    font-size:  14px;
+    font-size: 14px;
     font-weight: 400;
     padding-bottom: 10px;
     color: #4c5262;
@@ -69,10 +96,12 @@ header .menu-side .Playlist h4 {
 header .menu-side .Playlist h4:hover {
     color: #fff;
 }
+
 header .menu-side .Playlist h4 span {
     margin-right: 35px;
     position: relative;
 }
+
 header .menu-side .Playlist h4 span ::before {
     content: '';
     position: absolute;
@@ -83,53 +112,228 @@ header .menu-side .Playlist h4 span ::before {
     top: -4px;
     transition: 3.s linear;
 }
+
 header .menu-side .Playlist h4:hover span ::before {
     border: 2px solid #fff;
 }
 
 header .menu-side .menu-song {
     width: 100%;
-    height: 320px;
-    border: 1px solid #fff;
+    height: 300px;
+    /* border: 1px solid #fff; */
     margin-top: 40px;
 }
+
 header .menu-side .menu-song li {
- list-style-type: none; 
- position: relative;
- padding: 5px 0px 5px 20px;  
- display: flex;
- align-items: center;
- margin-bottom: 10px;
- cursor: pointer;
- transition: 3.s linear;
+    list-style-type: none;
+    position: relative;
+    padding: 5px 0px 5px 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 3.s linear;
 }
+
 header .menu-side .menu-song li:hover {
-   background: rgb(105, 105, 170,.1);
-   }
+    background: rgb(105, 105, 170, .1);
+}
 
 header .menu-side .menu-song li span {
     font-size: 12px;
     font-weight: 600;
-    color: #4c5262; 
-   }
+    color: #4c5262;
+}
 
-   header .menu-side .menu-song li img {
-    width: 32px; 
+header .menu-side .menu-song li img {
+    width: 32px;
     height: 32px;
     margin-left: 25px;
-   }
+}
 
-   header .menu-side .menu-song li h5 {
+header .menu-side .menu-song li h5 {
     font-size: 11px;
     margin-left: 15px;
-   }
-   header .menu-side .menu-song li h5.subtittle {
+}
+
+header .menu-side .menu-song li h5.subtittle {
     font-size: 9px;
     color: #4c5262;
-   }
-   header .menu-side .menu-song li .bi {
+}
+
+header .menu-side .menu-song li .bi {
     position: absolute;
     right: 15px;
     top: 6px;
     font-size: 16px;
-   }
+}
+
+header .master-play {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 0p 20px;
+}
+
+header .master-play .wave {
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid #fff; */
+    padding-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+}
+
+header .master-play .wave .wave1 {
+    width: 3px;
+    height: 10px;
+    margin: 3px;
+    border-radius: 10px 10px 0px 0px;
+    background: #36e2ec;
+    animation: unset
+}
+
+header .master-play .wave .wave1:nth-child(2) {
+    height: 13px;
+    /* animation-delay: .4s linear; */
+}
+
+header .master-play .wave .wave1:nth-child(3) {
+    height: 8px;
+    /* animation-delay: .8s linear; */
+}
+
+/* javascript class wave */
+header .master-play .active2 .wave1 {
+    animation: .5s linear infinite;
+}
+
+header .master-play .active2 .wave1:nth-child(2) {
+    animation-delay: .4s linear;
+}
+
+header .master-play .active2 .wave1:nth-child(3) {
+    animation-delay: .8s linear;
+}
+
+
+@keyframes wave {
+    0% {
+        height: 10px;
+    }
+
+    50% {
+        height: 15px;
+    }
+
+    100% {
+        height: 10px;
+    }
+}
+
+header .master-play img {
+    width: 35px;
+    height: 35px;
+}
+
+header .master-play h5 {
+    width: 130px;
+    font-size: 13px;
+    margin: 15px;
+    color: #fff;
+    line-height: 17px;
+}
+
+header .master-play h5 .subtitle {
+    font-size: 11px;
+    color: #4c5262;
+}
+
+header .master-play .icon {
+    font-size: 20px;
+    color: #fff;
+    margin: 0px 20px 0px 40px;
+}
+
+header .master-play .icon .bi {
+    cursor: pointer;
+    outline: none;
+}
+
+header .master-play .icon .bi:nth-child(2) {
+    border: 1px solid rgb(105, 105, 170, .1);
+    border-radius: 50%;
+    padding: 1px 3px 0px 6px;
+    margin: 0px 5px;
+    transition: .3s linear;
+}
+
+header .master-play span {
+    color: #fff;
+    width: 32px;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+header .master-play #current-start {
+    margin: 0px 0px 0px 20px;
+}
+
+header .master-play .bar {
+    position: relative;
+    width: 43%;
+    height: 2px;
+    background: rgb(105, 105, 170, .1);
+    margin: 0px 15px 0px 10px;
+}
+
+header .master-play .bar .bar2 {
+    position: absolute;
+    background: #36e2ec;
+    width: 20%;
+    height: 100%;
+    top: 0;
+}
+
+header .master-play .bar .dot {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #36e2ec;
+    border-radius: 50%;
+    left: 0%;
+    top: -1px;
+    transition: 1s linear;
+
+}
+
+#kotak-besar {
+    display: flex;
+    max-width: 100%;
+    overflow: auto;
+    margin-top: -7px;
+    margin-left: 3px;
+}
+
+#kotak-lagu {
+    border: 2px solid white;
+    width: 200px;
+    height: 160px;
+    font-size: 12px;
+    padding: 10px;
+}
+
+#kotak-lagu #boot-icon {
+   font-size: 30px;
+   margin-left: 150px; 
+   color: rgb(255, 255, 255);
+   cursor: pointer;
+}
+
+#kotak-lagu .bi {
+    font-size: 25px;
+    margin-left: 80px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
