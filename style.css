@@ -291,7 +291,7 @@ header .master-play .bar {
 header .master-play .bar .bar2 {
     position: absolute;
     background: #36e2ec;
-    width: 20%;
+    width: 0%;
     height: 100%;
     top: 0;
 }
@@ -308,6 +308,29 @@ header .master-play .bar .dot {
 
 }
 
+header .master-play .bar .dot::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #36e2ec;
+    border-radius: 50%;
+    left: -6px;
+    top: -6px;
+    box-shadow: inset 0px 0px 3px #36e2ec;
+}
+
+header .master-play .bar input{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -6px;
+    cursor: pointer;
+    z-index: 99999999;
+    transition: 3s linear;
+    opacity: 0;
+}
+
 #kotak-besar {
     display: flex;
     max-width: 100%;
@@ -316,7 +339,7 @@ header .master-play .bar .dot {
     margin-left: 3px;
 }
 
-#kotak-lagu {
+.kotak-lagu {
     border: 2px solid white;
     width: 200px;
     height: 160px;
@@ -324,14 +347,14 @@ header .master-play .bar .dot {
     padding: 10px;
 }
 
-#kotak-lagu #boot-icon {
+.kotak-lagu #boot-icon {
    font-size: 30px;
    margin-left: 150px; 
    color: rgb(255, 255, 255);
    cursor: pointer;
 }
 
-#kotak-lagu .bi {
+.kotak-lagu .bi {
     font-size: 25px;
     margin-left: 80px;
     color: rgb(255, 255, 255);
